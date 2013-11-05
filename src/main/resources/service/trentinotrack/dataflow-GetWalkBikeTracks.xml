@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataflow
+xmlns="http://www.example.org/mml-schema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
+
+	<variable name="page1" type="org.w3c.dom.Document"/>
+	<variable name="page1proto" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.OpenDataResourcePages" />
+	<variable name="url1" type="String"/>
+	<variable name="page2" type="org.w3c.dom.Document"/>
+	<variable name="page2proto" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.ResourceDescr"/>
+	<variable name="gpxString" type="String"/>
+	
+	<httpConnector name="connector" method="GET" encoding="UTF-8"/>
+	
+	<connect name="c1" connector="connector" outputVar="page1" >
+		<properties>
+			<property name="url">
+				<value>"http://dati.trentino.it/dataset/piste-ciclopedonali-del-trentino"</value>
+			</property>
+		</properties>
+	</connect>		
+	
+	<xss key="service/trentinotrack/opendata.xss.xml" outputVar="page1proto">
+		<in>page1</in>
+	</xss>  
+	
+	<script outputVar="page1proto">
+		<className>eu.trentorise.smartcampus.service.trentinotrack.scripts.TrentinoTrackScript</className>
+		<method>getResourceGPXURLs</method>
+		<variables>
+			<value>page1proto</value>
+		</variables>			
+	</script>
+
+	<foreach item="gpx" 
+		itemClass="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.OpenDataResourcePage"
+		aggregateVariable="trackList" outputVar="output" writeAction="append"
+		writeMethod="addAll">
+		<items>page1proto.getPagesList()</items>
+
+		<connect name="c2" connector="connector" outputVar="page2">
+			<properties>
+				<property name="url">
+					<value>"http://dati.trentino.it/" + gpx.getLink()</value>
+				</property>
+			</properties>
+		</connect>
+
+		<xss key="service/trentinotrack/opendata-resource.xss.xml"
+			outputVar="page2proto">
+			<in>page2</in>
+		</xss>
+
+
+		<connect name="c3" connector="connector" outputVar="gpxString"
+			transformer="string">
+			<properties>
+				<property name="url">
+					<value>page2proto.getLink()</value>
+				</property>
+			</properties>
+		</connect>
+
+		<script outputVar="trackList" writeAction="append" writeMethod="add">
+			<className>eu.trentorise.smartcampus.service.trentinotrack.scripts.TrentinoTrackScript
+			</className>
+			<method>parseGpx</method>
+			<variables>
+				<value>page2proto</value>
+			    <value>gpxString</value>
+			</variables>
+		</script>
+
+	</foreach>
+	
+</dataflow>

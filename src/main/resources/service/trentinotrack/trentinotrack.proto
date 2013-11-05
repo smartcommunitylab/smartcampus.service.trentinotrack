@@ -1,0 +1,23 @@
+package eu.trentorise.smartcampus.service.trentinotrack.data.message;
+
+message BikeTrack {
+ required string id = 1;
+ required string about = 2;
+ optional string label = 3;
+ optional string length = 4;
+ optional string polyline = 5; 
+}
+
+message OpenDataResourcePage {
+ required string link = 1;
+ required string format = 2;
+}
+message OpenDataResourcePages {
+ repeated OpenDataResourcePage pages = 1;
+}
+
+message ResourceDescr {
+ required string link = 1; 
+ optional string extPage = 2;
+}
+

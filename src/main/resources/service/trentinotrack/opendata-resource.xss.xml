@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xss:definition main="opendata-trentino" name="opendata-trentino"
+	namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
+
+	<xss:template name="opendata-trentino">
+		<html xss:anyAttrs="true">
+			<xss:path path="//div[@id='content']">
+			    <div id="content">
+					<div>
+						<div class="resource-actions">
+					        <a class="(.)*" onclick="(.)*"  href="(.)*" xss:anyContent="true" xss:label="link" xss:labelValue="@href"/>
+					        <a xss:anyAttrs="true" xss:anyContent="true"/>
+						</div>
+						<xss:repeat>
+						    <xss:choice>
+						        <div class="notes" property="rdfs:label">
+									<div id="notes-extract">
+										<p>
+										    <xss:anyText/>
+										    <a xss:anyAttrs="true"><xss:anyText label="extPage"/></a>
+										</p>
+									</div>
+						        </div>
+						        <div xss:anyAttrs="true" xss:anyContent="true"/>
+						        <br/>
+						        <span xss:anyAttrs="true" xss:anyContent="true"/>
+						    </xss:choice>
+						</xss:repeat>
+					</div>
+				</div>		
+			</xss:path>
+		</html>
+	</xss:template>
+
+</xss:definition>

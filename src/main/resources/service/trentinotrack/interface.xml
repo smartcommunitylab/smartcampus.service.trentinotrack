@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-definition xmlns="http://www.example.org/interface-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/interface-schema ../interface-schema.xsd ">
+	<interface serviceURI="smartcampus.service.trentinotrack">
+		<operation name="GetBikeTracks" storable="true">
+			<output type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack$BikeTrack" repeated="true" />
+		</operation>
+		<operation name="GetWalkBikeTracks" storable="true">
+			<output type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack$BikeTrack" repeated="true" />
+		</operation>
+			</interface>
+
+	<implementation package="eu.trentorise.smartcampus.service.trentinotrack">
+		<operationImpl name="GetBikeTracks"/>
+		<operationImpl name="GetWalkBikeTracks"/>
+			</implementation>	
+	
+</service-definition>

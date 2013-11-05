@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xss:definition main="opendata-trentino" name="opendata-trentino"
+	namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
+
+	<xss:template name="opendata-trentino">
+		<html xss:anyAttrs="true">
+			<xss:path path="//ul[@class='resource-list']">
+				<ul class="resource-list">
+				    <xss:repeat>
+					    <li xss:label="pages">
+					        <a href="(.)*">
+					            <img xss:anyAttrs="true"/>
+					            <xss:anyText/>
+					            <span class="format-box" property="dc:format"><xss:anyText label="format"/></span>
+								<xss:finally>
+									<xss:copy label="link" query="@href" />
+								</xss:finally>
+					        </a>
+					    </li>    
+				    </xss:repeat>
+				</ul>
+			</xss:path>
+		</html>
+	</xss:template>
+
+</xss:definition>

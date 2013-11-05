@@ -1,0 +1,875 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dcat="http://www.w3.org/ns/dcat#" class="no-js" lang="en">
+<!--<![endif]-->
+
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Piste ciclopedonali del Trentino / Percorso ciclopedonale
+	della Valle dell'Adige - Dataset - Risorsa - Dati aperti del Trentino
+	(BETA)</title>
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/images/icons/favicon.ico" />
+<link rel="alternate" type="application/atom+xml"
+	title="Dati aperti del Trentino (BETA) - Recent Revision History"
+	href="/revision/list?days=1&amp;format=atom" />
+<link href="http://fonts.googleapis.com/css?family=Ubuntu"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="/scripts/vendor/jqueryui/1.8.14/css/jquery-ui.custom.css"
+	type="text/css" media="screen, print" />
+<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"
+	media="screen, projection" />
+<link rel="stylesheet" href="/css/chosen.css" type="text/css" />
+<link rel="stylesheet" href="/css/style.css?v=2" />
+<link rel="stylesheet" href="/css/themes/default/default.css"
+	type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/nivo-slider.css" type="text/css"
+	media="screen" />
+<link rel="stylesheet" href="/css/trentino.css" type="text/css"
+	media="screen" />
+<!--[if lt IE 9]>
+                 <script type="text/javascript" src="/scripts/vendor/html5shiv/html5.js"></script>
+               <![endif]-->
+
+<link rel="stylesheet"
+	href="/scripts/vendor/slickgrid/2.0.1/slick.grid.css" />
+<link rel="stylesheet" href="/scripts/vendor/leaflet/0.3.1/leaflet.css" />
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="${h.url_for_static('/scripts/vendor/leaflet/0.3.1/leaflet.ie.css')}" />
+  <![endif]-->
+<link rel="stylesheet" href="/scripts/vendor/recline/css/recline.css" />
+<style type="text/css">
+.recline-query-editor form,.recline-query-editor .text-query {
+	height: 28px;
+}
+
+.recline-query-editor .pagination ul {
+	margin: 0;
+	padding: 0;
+}
+
+.recline-slickgrid {
+	height: 550px;
+}
+
+.slick-header-column {
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+}
+/* needed for Chrome but not FF */
+.header .recline-query-editor .add-on {
+	margin-left: -27px;
+}
+/* needed for FF but not chrome */
+.header .recline-query-editor .input-prepend {
+	vertical-align: top;
+}
+</style>
+
+<style type="text/css">
+.resource-actions {
+	margin-right: 0;
+}
+
+.resource-actions .btn {
+	position: relative;
+	bottom: 3px;
+	padding: 8px 10px;
+}
+
+.resource-actions .download {
+	display: inline;
+}
+
+.resource-actions .download img {
+	margin: 0px 4px -4px 0;
+}
+
+.preview-header {
+	padding-bottom: 13px;
+	padding-top: 0px;
+}
+
+.preview-header h3 {
+	display: inline;
+}
+
+.preview-header .btn {
+	float: right;
+	position: relative;
+	bottom: 6px;
+	padding: 8px 15px;
+}
+</style>
+<script type="text/javascript">
+	var preload_resource = {
+		"resource_group_id" : "48e22333-9b39-4a7d-8ff3-3c6e48269da1",
+		"cache_last_updated" : null,
+		"revision_timestamp" : "2013-05-14T10:24:13.951329",
+		"webstore_last_updated" : null,
+		"datastore_active" : false,
+		"id" : "ad05d144-74ec-4a56-9391-574c5295a111",
+		"size" : "251681",
+		"state" : "active",
+		"last_modified" : "2013-05-14T11:37:32.663069",
+		"hash" : "529ebd84c051fc016e2180689ad8987769f21221",
+		"description" : "Tracciato del percorso ciclopedonale della Valle dell'Adige. http://www.ciclabili.provincia.tn.it/tracciati_ciclopedonali/-valle_adige/pagina25.html",
+		"format" : "gpx",
+		"tracking_summary" : {
+			"total" : 0,
+			"recent" : 0
+		},
+		"mimetype_inner" : "",
+		"mimetype" : "text/plain",
+		"cache_url" : null,
+		"name" : "Percorso ciclopedonale della Valle dell'Adige",
+		"created" : "2013-05-14T11:37:29.556884",
+		"url" : "http://www.ciclabili.provincia.tn.it/binary/pat_piste_ciclabili/tracciati_ciclopedonali/valle_dell_adige.1312528075.GPX",
+		"webstore_url" : null,
+		"position" : 0,
+		"revision_id" : "980bb11a-9527-488b-a702-59a2d38b3e01",
+		"resource_type" : "file"
+	};
+	var embedPath = "http://dati.trentino.it/dataset/bba6b391-99cb-4617-9aae-654d503bb037/resource/ad05d144-74ec-4a56-9391-574c5295a111/embed";
+</script>
+<link rel="stylesheet" href="/css/extra.css" type="text/css">
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-34087014-1' ]);
+	_gaq.push([ '_setDomainName', 'auto' ]);
+	_gaq.push([ '_trackPageview' ]);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+<body class="resource_read              package              False   ">
+	<div id="wrap">
+		<div class="header outer">
+			<header class="container">
+			<div class="menu account">
+				<span class="ckan-logged-in" style="display: none;"> <a
+					href="/user/me"><img
+						src="http://gravatar.com/avatar/?s=20&amp;d=identicon"
+						class="gravatar" /></a> <a href="/user/_logout">Esci</a>
+				</span> <span class="ckan-logged-out"> <a href="/user/login">Accedi</a>
+					<!--<a href="${h.url_for(controller='user',action='register')}">Register</a>-->
+				</span>
+			</div>
+			<a href="/"> <img width="64" src="/images/trentino2.png"
+				alt="Dati aperti del Trentino (BETA) Logo"
+				title="Dati aperti del Trentino (BETA) Logo" id="logo" />
+			</a>
+			<div class="beta">beta</div>
+			<div id="site-name">
+				<a href="/">Dati aperti del Trentino (BETA) </a>
+			</div>
+			<div class="menu">
+				<span id="menusearch">
+					<form action="/dataset" method="GET">
+						<input name="q" value="" class="search"
+							placeholder="Cerca dataset" />
+					</form>
+				</span>
+				<div id="mainmenu">
+					<a class="" href="/dataset">Cerca</a> <a href="/organization">Organizzazioni</a>
+					<a class="" href="/category">Categorie</a> <a class=""
+						href="/about">Informazioni</a>
+				</div>
+			</div>
+			</header>
+		</div>
+		<div class="flash-messages container"></div>
+		<div id="main" class="container" role="main">
+			<h1 class="page_heading">
+				<a href="/dataset/piste-ciclopedonali-del-trentino">Piste
+					ciclopedonali del Trentino</a> / Percorso ciclopedonale della Valle
+				dell'Adige
+			</h1>
+			<div class="row">
+				<div class="span12">
+					<div id="minornavigation">
+						<ul class="nav nav-pills">
+							<li class=""><a class=""
+								href="/dataset/piste-ciclopedonali-del-trentino"><img
+									src="/images/icons/package.png" height="16px" width="16px"
+									alt="None" class="inline-icon " /> Visualizza</a></li>
+							<li class="dropdown active"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#"><img
+									src="/images/icons/page_white_stack.png" height="16px"
+									width="16px" alt="None" class="inline-icon " /> Risorse (22)<b
+									class="caret"></b></a>
+								<div class="dropdown-appears">
+									<ul class="dropdown-menu">
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/ad05d144-74ec-4a56-9391-574c5295a111"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Valle dell&#39;Adige</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/6bb0fe42-2a1f-4119-860a-225f34d58b08"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Valle dell&#39;Adige</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/621404d3-f278-4d84-9094-b7630ee8a8a1"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Valsugana</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/c97ca5c4-53a0-4868-ab6e-dadce49cc895"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Valsugana</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/16c77a34-9d16-4c3e-958d-9054d1046ba2"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale del Primiero</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/860157c5-36f0-4ef1-8c99-792ad74dbf4a"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale del Primiero</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/4595135f-7eab-41db-a153-acc6fb26b9ae"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val di Sole</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/6b1078e9-9c87-4a4b-b16a-200f5cb46aed"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val di Sole</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/ee0e7994-d273-48b2-8537-ef8a95aa35e2"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val di Fiemme e Val di Fassa</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/d01628e2-c551-4fa3-ae68-e2c343c2dae4"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val di Fiemme e Val di Fassa</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/00cdcb02-68bc-4387-b505-5b74840bbcb3"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val Rendena</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/9720ce78-ec7e-4ed4-8aa1-2567b1cb6c3e"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val Rendena</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/f1bff6ed-602d-432d-ba0e-594b40679547"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale delle Giudicarie Inferiori</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/1810bfdf-1ea8-4eb2-a7e1-43b2cd2ec371"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale delle Giudicarie Inferiori</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/c2289ed0-c493-491e-907a-0c445852eff0"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale del Garda trentino - Basso Sarca</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/c4e37ee9-6b5a-4be8-9236-abc33c25ddec"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale del Garda trentino - Basso Sarca</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/7edd9962-d7dd-498b-9b10-155928054453"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Valle dei Laghi</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/85a3e643-2c1c-4551-923e-4ee54df19ca1"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Valle dei Laghi</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/5a1dec8b-799a-49cd-8cc4-7eea693b3d8f"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale di Ledro e Concei</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/c20698f0-42d9-455e-97e0-d3bcfa63bb06"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale di Ledro e Concei</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/55ed205a-0891-4453-9a2a-edfe4b2bd810"><img
+												src="/images/icons/page_white.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val di Non</a></li>
+										<li><a
+											href="/dataset/piste-ciclopedonali-del-trentino/resource/c63cbc36-695f-4d8a-a5a1-ba269d9254b6"><img
+												src="/images/icons/page_white_compressed.png" height="16px"
+												width="16px" alt="None" class="inline-icon " /> Percorso
+												ciclopedonale della Val di Non</a></li>
+									</ul>
+								</div></li>
+							<li class=""><a class=""
+								href="/dataset/piste-ciclopedonali-del-trentino/related"><img
+									src="/images/icons/package.png" height="16px" width="16px"
+									alt="None" class="inline-icon " /> Apps, Idee etc ()</a></li>
+							<li class=""><a class=""
+								href="/dataset/history/piste-ciclopedonali-del-trentino"><img
+									src="/images/icons/page_stack.png" height="16px" width="16px"
+									alt="None" class="inline-icon " /> Cronologia</a></li>
+							<li class="" style="float: right;"><a class=""
+								href="/dataset/followers/piste-ciclopedonali-del-trentino"><img
+									src="/images/icons/authorization_group.png" height="16px"
+									width="16px" alt="None" class="inline-icon " /> Sostenitori
+									(0)</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span9 content-outer">
+					<div id="content">
+						<div>
+							<div class="resource-actions">
+								<a
+									class="btn btn-primary resource-url-analytics resource-type-file"
+									href="http://www.ciclabili.provincia.tn.it/binary/pat_piste_ciclabili/tracciati_ciclopedonali/valle_dell_adige.1312528075.GPX"
+									onclick="javascript: _gaq.push(['_trackPageview', '/downloads/http%3A//www.ciclabili.provincia.tn.it/binary/pat_piste_ciclabili/tracciati_ciclopedonali/valle_dell_adige.1312528075.GPX']);">
+									<div class="download">
+										<img src="/images/icons/arrow-down-16.png" /> Download
+									</div>
+								</a> <a class="btn disabled" rel="tooltip"
+									title="Le Data API non sono disponibili per questa risorsa perché il DataStore è disabilitato">Data
+									API</a>
+							</div>
+							<div class="modal-data-api-help modal fade in"
+								style="display: none;">
+								<div class="modal-header">
+									<h3>CKAN Data API</h3>
+								</div>
+								<div class="modal-body">
+									<p>
+										<strong>Access resource data via a web API with
+											powerful query support</strong>. Further information in the <a
+											href="http://docs.ckan.org/en/latest/datastore.html"
+											target="_blank">main CKAN Data API and DataStore
+											documentation</a>.
+									</p>
+									<div class="accordion" id="accordion2">
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<a class="accordion-toggle" data-toggle="collapse"
+													data-parent="accordion2" href="#collapse-endpoints">Endpoints
+													»</a>
+											</div>
+											<div id="collapse-endpoints"
+												class="in accordion-body collapse">
+												<div class="accordion-inner">
+													<p>The Data API can be accessed via the following
+														actions of the CKAN action API.</p>
+													<table class="table-condensed table-striped table-bordered">
+														<thead></thead>
+														<tbody>
+															<tr>
+																<th>Create</th>
+																<td><code>http://dati.trentino.it/api/action/datastore_create</code></td>
+															</tr>
+															<tr>
+																<th>Update / Insert</th>
+																<td><code>http://dati.trentino.it/api/action/datastore_upsert</code></td>
+															</tr>
+															<tr>
+																<th>Query</th>
+																<td><code>http://dati.trentino.it/api/action/datastore_search</code></td>
+															</tr>
+															<tr>
+																<th>Query (via SQL)</th>
+																<td><code>http://dati.trentino.it/api/action/datastore_search_sql</code></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<a class="accordion-toggle" data-toggle="collapse"
+													data-parent="accordion2" href="#collapse-querying">Querying
+													»</a>
+											</div>
+											<div id="collapse-querying"
+												class="collapse accordion-body in">
+												<div class="accordion-inner">
+													<strong>Query example (first 5 results)</strong>
+													<p>
+														<code>
+															<a
+																href="http://dati.trentino.it/api/action/datastore_search?resource_id=ad05d144-74ec-4a56-9391-574c5295a111&amp;limit=5"
+																target="_blank">http://dati.trentino.it/api/action/datastore_search?resource_id=ad05d144-74ec-4a56-9391-574c5295a111&amp;limit=5</a>
+														</code>
+													</p>
+													<strong>Query example (results containing 'jones')</strong>
+													<p>
+														<code>
+															<a
+																href="http://dati.trentino.it/api/action/datastore_search?resource_id=ad05d144-74ec-4a56-9391-574c5295a111&amp;q=jones"
+																target="_blank">http://dati.trentino.it/api/action/datastore_search?resource_id=ad05d144-74ec-4a56-9391-574c5295a111&amp;q=jones</a>
+														</code>
+													</p>
+													<strong>Query example (via SQL statement)</strong>
+													<p>
+														<code>
+															<a
+																href="
+  http://dati.trentino.it/api/action/datastore_search_sql?sql=SELECT * from &#34;ad05d144-74ec-4a56-9391-574c5295a111&#34; WHERE title LIKE 'jones'
+  "
+																target="_blank">
+																http://dati.trentino.it/api/action/datastore_search_sql?sql=SELECT
+																* from "ad05d144-74ec-4a56-9391-574c5295a111" WHERE
+																title LIKE 'jones' </a>
+														</code>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<a class="accordion-toggle" data-toggle="collapse"
+													data-parent="accordion2" href="#collapse-javascript">Example:
+													Javascript »</a>
+											</div>
+											<div id="collapse-javascript" class="accordion-body collapse">
+												<div class="accordion-inner">
+													<p>A simple ajax (JSONP) request to the data API using
+														jQuery.</p>
+													<pre>
+  var data = {
+    resource_id: 'ad05d144-74ec-4a56-9391-574c5295a111', // the resource id
+    limit: 5, // get 5 results
+    q: 'jones' // query for 'jones'
+  };
+  $.ajax({
+    url: 'http://dati.trentino.it/api/action/datastore_search',
+    data: data,
+    dataType: 'jsonp',
+    success: function(data) {
+      alert('Total results found: ' + data.result.total)
+    }
+  });</pre>
+												</div>
+											</div>
+										</div>
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<a class="accordion-toggle" data-toggle="collapse"
+													data-parent="accordion2" href="#collapse-python">Example:
+													Pyhton »</a>
+											</div>
+											<div id="collapse-python" class="accordion-body collapse">
+												<div class="accordion-inner">
+													<pre>
+import urllib
+url = 'http://dati.trentino.it/api/action/datastore_search?limit=5&amp;q=title:jones'
+fileobj = urllib.urlopen(url)
+print fileobj.read()
+</pre>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-data-viewer-embed-dialog modal fade in"
+								style="display: none;">
+								<div class="modal-header">
+									<a class="close" data-dismiss="modal">×</a>
+									<h3>Incorpora il visualizzatore dei dati</h3>
+								</div>
+								<div class="modal-body">
+									<div>
+										<p>
+											<strong>Incorpora questa vista</strong> copiandola nella tua
+											pagina web:
+										</p>
+										<textarea class="embedIframeText"
+											style="width: 100%; height: 200px;"></textarea>
+										<p>Scegli larghezza e altezza in pixel:</p>
+										<label for="iframe-width">Larghezza:</label> <input
+											class="iframe-width" name="iframe-width" value="800" /> <label
+											for="iframe-height">Altezza:</label> <input
+											class="iframe-height" name="iframe-height" value="500" />
+									</div>
+									<a class="embedLink" href="">Anteprima</a>
+								</div>
+							</div>
+							<div class="quick-info">
+								<dl>
+									<dt>Ultimo aggiornamento</dt>
+									<dd>5 months and 22 days</dd>
+									<dt>Formato</dt>
+									<dd>gpx</dd>
+									<dt>Licenza</dt>
+									<dd>
+										<span><a
+											href="http://creativecommons.org/publicdomain/zero/1.0/deed.it"
+											rel="dc:rights">Creative Commons CCZero</a></span> <a
+											href="http://opendefinition.org/okd/"
+											title="Questo dataset è conforme alla Open Definition.">
+											<img class="open-data"
+											src="http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png"
+											alt="[Open Data]" />
+										</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="notes" property="rdfs:label">
+								<div id="notes-extract">
+									<p>
+										Tracciato del percorso ciclopedonale della Valle dell'Adige. <a
+											href="http://www.ciclabili.provincia.tn.it/tracciati_ciclopedonali/-valle_adige/pagina25.html"
+											target="_blank" rel="nofollow">http://www.ciclabili.provincia.tn.it/tracciati_ciclopedonali/-valle_adige/pagina25.html</a>
+									</p>
+								</div>
+							</div>
+							<div class="resource-preview">
+								<div class="preview-header">
+									<h3>Anteprima</h3>
+									<a style="display: none;" class="btn btn-primary"
+										data-toggle="modal" href=".modal-data-viewer-embed-dialog">Incorpora</a>
+								</div>
+								<div id="ckanext-datapreview"></div>
+							</div>
+							<br />
+							<div class="resource-information">
+								<h3>Informazioni supplementari</h3>
+								<table
+									class="table table-bordered table-striped table-condensed">
+									<thead>
+										<tr>
+											<th scope="col">Campo</th>
+											<th scope="col">Valore</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">cache_last_updated</td>
+											<td class="dataset-details" property="rdf:value"></td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">cache_url</td>
+											<td class="dataset-details" property="rdf:value"></td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">created</td>
+											<td class="dataset-details" property="rdf:value">2013-05-14T11:37:29.556884</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">datastore_active</td>
+											<td class="dataset-details" property="rdf:value">False</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">Formato</td>
+											<td class="dataset-details" property="rdf:value">gpx</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">hash</td>
+											<td class="dataset-details" property="rdf:value">529ebd84c051fc016e2180689ad8987769f21221</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">id</td>
+											<td class="dataset-details" property="rdf:value">ad05d144-74ec-4a56-9391-574c5295a111</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">last_modified</td>
+											<td class="dataset-details" property="rdf:value">2013-05-14T11:37:32.663069</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">mimetype</td>
+											<td class="dataset-details" property="rdf:value">text/plain</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">mimetype_inner</td>
+											<td class="dataset-details" property="rdf:value"></td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">name</td>
+											<td class="dataset-details" property="rdf:value">Percorso
+												ciclopedonale della Valle dell'Adige</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">position</td>
+											<td class="dataset-details" property="rdf:value">0</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">resource_group_id</td>
+											<td class="dataset-details" property="rdf:value">48e22333-9b39-4a7d-8ff3-3c6e48269da1</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">resource_type</td>
+											<td class="dataset-details" property="rdf:value">file</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">revision_id</td>
+											<td class="dataset-details" property="rdf:value">980bb11a-9527-488b-a702-59a2d38b3e01</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">revision_timestamp</td>
+											<td class="dataset-details" property="rdf:value">2013-05-14T10:24:13.951329</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">Dimensione</td>
+											<td class="dataset-details" property="rdf:value">251681</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">state</td>
+											<td class="dataset-details" property="rdf:value">active</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">tracking_summary</td>
+											<td class="dataset-details" property="rdf:value">totalrecent</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">url</td>
+											<td class="dataset-details" property="rdf:value">http://www.ciclabili.provincia.tn.it/binary/pat_piste_ciclabili/tracciati_ciclopedonali/valle_dell_adige.1312528075.GPX</td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">webstore_last_updated</td>
+											<td class="dataset-details" property="rdf:value"></td>
+										</tr>
+										<tr>
+											<td class="dataset-label" property="rdfs:label">webstore_url</td>
+											<td class="dataset-details" property="rdf:value"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<span class="insert-comment-thread"></span>
+						</div>
+					</div>
+					<!-- /content -->
+				</div>
+				<div class="span3 sidebar-outer">
+					<div id="sidebar">
+						<ul class="widget-list">
+							<primarysidebar> <!-- Primary Side Bar Goes Here -->
+							</primarysidebar>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+	</div>
+	<div class="clearfix"></div>
+	<div class="footer outer">
+		<footer class="container">
+		<div class="row">
+			<div class="span6">
+				<h3 class="widget-title">Informazioni</h3>
+				<div class="textwidget">
+					<ul>
+						<li><a href="/about">Informazioni</a></li>
+						<li><a href="/faq"> Frequently Asked Questions (FAQ) </a></li>
+						<li><a href="http://docs.ckan.org/en/latest/api.html">Documentazione
+								API</a></li>
+						<li><a href="/tag"> Tag </a></li>
+						<li><a href="/ckan-admin"> Interfaccia di amministrazione
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="span3">
+				<h3 class="widget-title">Lingue</h3>
+				<div class="textwidget">
+					<ul>
+						<li><a
+							href="/it/dataset/piste-ciclopedonali-del-trentino/resource/ad05d144-74ec-4a56-9391-574c5295a111">
+								italiano </a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="span3">
+				<p id="credits">
+					Powered by <a href="http://spaziodati.eu/">SpazioDati</a> &amp; <a
+						href="http://ckan.org">CKAN</a> v1.8<br />
+				</p>
+			</div>
+		</div>
+		</footer>
+	</div>
+	<!-- eo #container -->
+	<script src="/scripts/vendor/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript" src="/scripts/vendor/json2.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.tmpl/beta1/jquery.tmpl.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.chosen/0.9.7/chosen.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.placeholder/jquery.placeholder.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jqueryui/1.8.14/jquery-ui.min.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/bootstrap/2.0.3/bootstrap.min.js"></script>
+	<!-- for application.js -->
+	<script type="text/javascript"
+		src="/scripts/vendor/underscore/1.1.6/underscore.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/backbone/0.5.1/backbone.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.fileupload/20110801/jquery.iframe-transport.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.fileupload/20110801/jquery.fileupload.js"></script>
+	<!-- Translated js strings live inside an html template. -->
+	<script type="text/javascript">
+		/*
+		 * Included as inline javascript in layout_base.html. Simpler than
+		 * trying to trick the translation system into reading a js file.
+		 */
+		var CKAN = CKAN || {};
+		CKAN.Strings = CKAN.Strings || {};
+		/*
+		 * Used in application.js.
+		 */
+		CKAN.Strings = {
+			"resourceType" : "Tipo di risorsa",
+			"code" : "Codice",
+			"hash" : "Hash",
+			"key" : "Chiave",
+			"dataFileUploaded" : "File di dati (caricato)",
+			"youHaveUnsavedChanges" : "Hai delle modifiche non ancora salvate. Ricordati di cliccare su \"Salva le modifiche\" in fondo alla pagina prima di uscire.",
+			"errorDataProxy" : "Il DataProxy ha restituito un errore",
+			"unfollow" : "Non seguire pi\u00f9",
+			"deleteThisResourceQuestion" : "Vuoi eliminare la risorsa '%name%'?",
+			"value" : "Valore",
+			"cancel" : "Annulla",
+			"follow" : "Segui",
+			"id" : "ID",
+			"visualization" : "Visualizzazione",
+			"loading" : "Caricando...",
+			"addExtraField" : "Aggiungi un campo extra",
+			"previewNotAvailableForDataType" : "Anteprima non disponibile per il tipo dei dati: ",
+			"unknown" : "Sconosciuto",
+			"doneEditing" : "Fatto",
+			"noNameBrackets" : "(senza nome)",
+			"deleteResource" : "Elimina risorsa",
+			"failedToSave" : "Errore nel salvare, forse perch\u00e9 i dati non sono validi ",
+			"urlIsUnchanged" : "Questa \u00e8 la URL corrente.",
+			"preview" : "Anteprima",
+			"image" : "Immagine",
+			"metadata" : "Metadati",
+			"dataFile" : "File di dati",
+			"checkingUploadPermissions" : "Controllando i permessi per l'upload ...",
+			"description" : "Descrizione",
+			"format" : "Formato",
+			"checking" : "Controllo...",
+			"addDataset" : "Aggiungi un dataset",
+			"resourceHasUnsavedChanges" : "Questa risorsa ha delle modifiche non salvate.",
+			"errorDataStore" : "Il DataStore ha restituito un errore",
+			"example" : "Esempio",
+			"addGroup" : "Aggiungi un'organizzazione",
+			"datesAreInISO" : "Le date sono in %aformato ISO%b \u2014 es. %c2012-12-25%d o %c2010-05-31T14:30%d.",
+			"mimetype" : "Tipo MIME",
+			"errorLoadingPreview" : "Non posso caricare l'anteprima",
+			"urlIsTooShort" : "Digita almeno due caratteri...",
+			"failedToGetCredentialsForUpload" : "Impossibile ottenere le credenziali per effettuare l'upload nello storage. L'upload non pu\u00f2 proseguire",
+			"sizeBracketsBytes" : "Dimensione (bytes)",
+			"name" : "Nome",
+			"datastoreEnabled" : "DataStore abilitato",
+			"created" : "Creato",
+			"url" : "URL",
+			"lastModified" : "Ultima modifica",
+			"urlIsAvailable" : "Questa URL \u00e8 disponibile",
+			"documentation" : "Documentazione",
+			"upload" : "Carica",
+			"urlIsNotAvailable" : "Questa URL \u00e8 gi\u00e0 stata usata, per favore usane un'altra.",
+			"resourceFormatPlaceholder" : "es. csv, html, xls, rdf, ...",
+			"youCanUseMarkdown" : "Puoi usare una %aformattazione Markdown%b qui.",
+			"edit" : "Modifica",
+			"api" : "API",
+			"mimetypeInner" : "Tipo MIME del contenuto",
+			"uploadingFile" : "File in caricamento ...",
+			"extraFields" : "Campi extra"
+		}
+	</script>
+	<!-- finally our application js that sets everything up-->
+	<script type="text/javascript"
+		src="/scripts/application.js?lang=${c.locale}"></script>
+	<script type="text/javascript" src="/scripts/templates.js"></script>
+	<script type="text/javascript">
+		CKAN.plugins = [
+		// Declare js array from Python string
+		'datastorer', 'pat', 'organizations', 'organizations_dataset', 'stats',
+				'datastore', 'googleanalytics', 'harvest', 'ckan_harvester',
+				'patstatweb_harvester', 'pat_categories', ];
+		CKAN.plugins.push('storage');
+		CKAN.SITE_URL = '/';
+		CKAN.SITE_URL_NO_LOCALE = '/';
+		CKAN.LANG = 'it';
+		// later use will add offsets with leading '/' so ensure no trailing slash
+		CKAN.SITE_URL = CKAN.SITE_URL.replace(/\/$/, '');
+		CKAN.SITE_URL_NO_LOCALE = CKAN.SITE_URL_NO_LOCALE.replace(/\/$/, '');
+		$(document).ready(function() {
+			var ckan_user = '';
+			if (ckan_user) {
+				$(".ckan-logged-out").hide();
+				$(".ckan-logged-in").show();
+			}
+			$('input[placeholder], textarea[placeholder]').placeholder();
+			$(".chzn-select").chosen();
+		});
+	</script>
+	<script type="text/javascript"
+		src="/scripts/vendor/jquery.mustache/jquery.mustache.js"></script>
+
+	<script type="text/javascript"
+		src="/scripts/vendor/mustache/0.5.0-dev/mustache.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/slickgrid/2.0.1/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/slickgrid/2.0.1/jquery.event.drag-2.0.min.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/slickgrid/2.0.1/slick.grid.min.js"></script>
+	<script type="text/javascript" src="/scripts/vendor/flotr2/flotr2.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/moment/1.6.2/moment.js"></script>
+	<script type="text/javascript"
+		src="/scripts/vendor/leaflet/0.3.1/leaflet.js"></script>
+	<script src="/scripts/vendor/recline/recline.js"></script>
+
+</body>
+</html>
+
+
