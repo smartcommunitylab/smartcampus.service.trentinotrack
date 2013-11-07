@@ -1,6 +1,9 @@
 package eu.trentorise.smartcampus.service.trentinotrack.scripts;
 
+import it.sayservice.platform.core.bus.common.exception.DataFlowException;
+
 import java.io.ByteArrayInputStream;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -56,9 +59,9 @@ public class TrentinoTrackScript {
 		return Collections.emptyList();
 	}
 	
-	public BikeTrack parseGpx(ResourceDescr descr, String rdf) {
+	public BikeTrack parseGpx(ResourceDescr descr, String rdf) throws DataFlowException {
 		if (!rdf.startsWith("<")) rdf = rdf.substring(rdf.indexOf('<'));
-		GPXParser parser = new GPXParser(new ByteArrayInputStream(rdf.trim().getBytes()));
+		GPXParser parser = new GPXParser(new ByteArrayInputStream(rdf.trim().getBytes(Charset.forName("UTF-8"))));
 		try {
 			List<Polyline> list = parser.parse();
 			assert list.size() == 1;
@@ -72,10 +75,10 @@ public class TrentinoTrackScript {
 				// suppose to have a single track for a file
 				return bt.build();
 			}
-		} catch (XMLStreamException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		throw new DataFlowException("Failed to parse rdf data");
 	}
 
 }

@@ -18,7 +18,7 @@ public class GPXParser {
 		this.is = is;
 	}
 
-	public List<Polyline> parse() throws XMLStreamException {
+	public List<Polyline> parse() throws Exception {
 		List<Polyline> res = new ArrayList<Polyline>();
 		
 		XMLInputFactory f = XMLInputFactory.newInstance();

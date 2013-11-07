@@ -62,7 +62,7 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 			</properties>
 		</connect>
 
-		<script outputVar="trackList" writeAction="append" writeMethod="add">
+		<script outputVar="trackList" writeAction="append" writeMethod="add" onError="continue">
 			<className>eu.trentorise.smartcampus.service.trentinotrack.scripts.TrentinoTrackScript
 			</className>
 			<method>parseGpx</method>
