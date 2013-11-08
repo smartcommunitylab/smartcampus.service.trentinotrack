@@ -10,6 +10,8 @@ import java.util.List;
 
 import javax.xml.stream.XMLStreamException;
 
+import org.apache.commons.lang.WordUtils;
+
 import com.google.protobuf.Message;
 
 import eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.BikeTrack;
@@ -22,6 +24,8 @@ import eu.trentorise.smartcampus.service.trentinotrack.scripts.encoder.RDFParser
 
 
 public class TrentinoTrackScript {	
+
+	private static final int MIN_LENGTH = 5000;
 
 	public String getResourceRDFURL(OpenDataResourcePages pages) {
 		for (OpenDataResourcePage page : pages.getPagesList()) {
@@ -47,6 +51,11 @@ public class TrentinoTrackScript {
 				BikeTrack.Builder bt = BikeTrack.newBuilder()
 				.setAbout(p.getAbout())
 				.setId(p.getId());
+
+				if (p.getPolyline() == null || Double.parseDouble(p.getLength()) < MIN_LENGTH) {
+					continue;
+				}
+				
 				if (p.getLabel() != null) bt.setLabel(p.getLabel());
 				if (p.getLength() != null) bt.setLength(p.getLength());
 				if (p.getPolyline() != null) bt.setPolyline(p.getPolyline());
@@ -69,7 +78,7 @@ public class TrentinoTrackScript {
 				BikeTrack.Builder bt = BikeTrack.newBuilder()
 				.setAbout(descr.getExtPage())
 				.setId(p.getId());
-				bt.setLabel(p.getLabel());
+				bt.setLabel(cleanLabel(p.getLabel()));
 				if (p.getLength() != null) bt.setLength(p.getLength());
 				if (p.getPolyline() != null) bt.setPolyline(p.getPolyline());
 				// suppose to have a single track for a file
@@ -79,6 +88,10 @@ public class TrentinoTrackScript {
 			e.printStackTrace();
 		}
 		throw new DataFlowException("Failed to parse rdf data");
+	}
+	
+	private String cleanLabel(String label) {
+		return WordUtils.capitalize(label.replace("_", " "));
 	}
 
 }

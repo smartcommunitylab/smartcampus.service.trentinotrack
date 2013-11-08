@@ -54,7 +54,10 @@ public class RDFParser {
 					pl.setPolyline(convertPolyline(r.getElementText()));
 				}
 				if (n.getLocalPart().equals("label")) {
-					pl.setLabel(r.getElementText());
+					String txt = r.getElementText();
+					if (pl.getLabel() == null || txt.length() > pl.getLabel().length()) {
+						pl.setLabel(txt);
+					}
 				}
 				if (n.getLocalPart().equals("length")) {
 					pl.setLength(r.getElementText());
