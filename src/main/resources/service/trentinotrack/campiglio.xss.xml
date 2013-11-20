@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xss:definition main="campiglio" name="campiglio"
+	namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
+
+	<xss:template name="campiglio">
+		<html xss:anyAttrs="true">
+			<xss:path path="//div[@class='contenuti']">
+			    <div class='contenuti'>
+			    <h1 xss:anyAttrs="true"><xss:anyText/></h1>
+			    <xss:repeat>
+			    	<p xss:anyContent="true" />
+			    </xss:repeat>
+			    <table xss:anyAttrs="true">
+			        <tbody>
+			    	<xss:repeat >
+			    	    <tr>
+			    	    	<xss:repeat>
+			    	        <td xss:label="pages">
+			    	            	<xss:repeat>
+				    	            	<xss:choice>
+											<p>
+											    <xss:optional>
+											        <img xss:anyAttrs="true" xss:anyContent="true"/>
+											    </xss:optional>
+						    				    <strong>
+										            <a href="(.)*"><xss:anyText label="title"/>
+													<xss:finally>
+														<xss:copy label="link" query="@href" />
+													</xss:finally>						    				        
+						    				        </a>
+						    				        
+						    				    </strong>
+						    				</p>	 
+				    	            	    <p xss:anyAttrs="true" xss:anyContent="true"/>
+				    	            	    <h5 xss:anyAttrs="true" xss:anyContent="true"/>
+						    			</xss:choice>
+					    			</xss:repeat>
+
+			    	        </td>
+			    	        </xss:repeat>
+			    	    </tr>    
+			    	</xss:repeat>
+			    	</tbody>
+			    </table>
+			    <xss:repeat>
+			    	    <xss:element name="(.)*" anyAttrs="true" anyContent="true"/>
+			    </xss:repeat>			    
+			    </div>
+			</xss:path>
+		</html>
+	</xss:template>
+
+</xss:definition>

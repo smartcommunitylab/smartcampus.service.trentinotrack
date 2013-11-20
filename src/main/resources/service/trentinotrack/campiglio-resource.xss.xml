@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xss:definition main="opendata-trentino" name="opendata-trentino"
+	namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
+
+	<xss:template name="opendata-trentino">
+		<html xss:anyAttrs="true">
+			<xss:path path="//div[@class='contenuti']">
+				<div class='contenuti'>
+				<xss:repeat>
+					<xss:choice>
+						<h1 xss:anyAttrs="true" xss:anyContent="true" />
+						<strong xss:anyAttrs="true" xss:anyContent="true" />
+						<div xss:anyAttrs="true" xss:anyContent="true" />
+						<script xss:anyAttrs="true" xss:anyContent="true" />
+						<p>
+						    <xss:optional>
+						        <xss:anyText />
+						    </xss:optional>
+							<xss:choice>
+								<a href="(.)*\.zip" xss:anyContent="true">
+									<xss:finally>
+										<xss:copy label="link" query="@href" />
+									</xss:finally>
+								</a>
+								<xss:element name="(.)*" anyAttrs="true">
+									<a href="(.)*\.zip" xss:anyContent="true">
+										<xss:finally>
+											<xss:copy label="link" query="@href" />
+										</xss:finally>
+									</a>								    
+								</xss:element>
+							</xss:choice>
+						</p>
+						<p xss:anyAttrs="true" xss:anyContent="true" />
+					</xss:choice>
+				</xss:repeat>
+				</div>
+			</xss:path>
+		</html>
+	</xss:template>
+
+</xss:definition>

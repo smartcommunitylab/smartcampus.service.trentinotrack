@@ -21,3 +21,12 @@ message ResourceDescr {
  optional string extPage = 2;
 }
 
+
+message CampiglioMainPage {
+ repeated CampiglioDataPage pages = 1;
+}
+
+message CampiglioDataPage {
+ required string title = 1;
+ required string link = 2;
+}

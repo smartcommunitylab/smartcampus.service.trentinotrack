@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataflow
+xmlns="http://www.example.org/mml-schema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
+
+	<variable name="page1" type="org.w3c.dom.Document"/>
+	<variable name="page1proto" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.CampiglioMainPage" />
+	<variable name="url1" type="String"/>
+	<variable name="page2" type="org.w3c.dom.Document"/>
+	<variable name="page2proto" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.ResourceDescr"/>
+	<variable name="rdf" type="String"/>
+	
+	<httpConnector name="connector" method="GET" encoding="UTF-8"/>
+	
+	<connect name="c1" connector="connector" outputVar="page1" >
+		<properties>
+			<property name="url">
+				<value>"http://www.campigliodolomiti.it/lang/IT/pagine/dettaglio/estate,121/passeggiate_per_famiglie,577.html"</value>
+			</property>
+		</properties>
+	</connect>		
+	
+	<xss key="service/trentinotrack/campiglio.xss.xml" outputVar="page1proto">
+		<in>page1</in>
+	</xss>  
+	
+	<foreach item="page" 
+		itemClass="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.CampiglioDataPage"
+		aggregateVariable="tracks" outputVar="output" writeAction="append"
+		writeMethod="addAll">
+		<items>page1proto.getPagesList()</items>
+
+		<connect name="c2" connector="connector" outputVar="page2">
+			<properties>
+				<property name="url">
+					<value>page.getLink()</value>
+				</property>
+			</properties>
+		</connect>	
+		
+		<xss key="service/trentinotrack/campiglio-resource.xss.xml" outputVar="page2proto">
+			<in>page2</in>
+		</xss>  		
+		
+		<script outputVar="tracks" writeAction="append" writeMethod="addAll" onError="continue">
+			<className>eu.trentorise.smartcampus.service.trentinotrack.scripts.TrentinoTrackScript</className>
+			<method>downloadZip</method>
+			<variables>
+				<value>page2proto</value>
+				<value>page</value>
+			</variables>			
+		</script>			
+		
+	
+	</foreach>
+	
+</dataflow>

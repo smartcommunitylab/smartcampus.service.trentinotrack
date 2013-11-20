@@ -97,6 +97,22 @@
 										<runnableAfterDelay>true</runnableAfterDelay>
 									</statusParameters>
 								</method>
+								<method>
+									<methodName>GetWalkTracks</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*30}</delay>
+										<period>#{1000L*60*60*24*7}</period>
+										<periodOnDefault>#{1000L*60*60*24*1}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24*2}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*30}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>								
 							</methods>
 						</service>
 					</services>

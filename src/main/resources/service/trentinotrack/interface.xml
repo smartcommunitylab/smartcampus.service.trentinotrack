@@ -7,11 +7,15 @@
 		<operation name="GetWalkBikeTracks" storable="true">
 			<output type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack$BikeTrack" repeated="true" />
 		</operation>
+		<operation name="GetWalkTracks" storable="true">
+			<output type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack$BikeTrack" repeated="true" />
+		</operation>		
 			</interface>
 
 	<implementation package="eu.trentorise.smartcampus.service.trentinotrack">
 		<operationImpl name="GetBikeTracks"/>
 		<operationImpl name="GetWalkBikeTracks"/>
+		<operationImpl name="GetWalkTracks"/>
 			</implementation>	
 	
 </service-definition>
