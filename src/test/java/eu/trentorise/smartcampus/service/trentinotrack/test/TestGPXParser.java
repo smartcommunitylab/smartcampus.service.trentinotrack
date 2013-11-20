@@ -8,7 +8,7 @@ import eu.trentorise.smartcampus.service.trentinotrack.scripts.encoder.GPXParser
 
 public class TestGPXParser {
 
-	public static void main(String[] args) throws XMLStreamException {
+	public static void main(String[] args) throws Exception {
 		InputStream is = TestGPXParser.class.getResourceAsStream("/valle_dell_adige.1312528075.GPX.txt");
 		new GPXParser(is).parse();
 	}

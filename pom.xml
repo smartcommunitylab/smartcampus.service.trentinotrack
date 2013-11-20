@@ -50,10 +50,9 @@
 				<configuration>
 					<instructions>
 						<Include-Resource>{maven-resources}</Include-Resource>
+						<Import-Package>*</Import-Package>
 						<Export-Package>eu.trentorise.smartcampus.service.trentinotrack.*</Export-Package>
 						<Private-Package>!*</Private-Package>
-						<DynamicImport-Package>*</DynamicImport-Package>
-						<Import-Package>org.apache.log4j.*,*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -67,6 +66,9 @@
 							<methods>
 								<method>
 									<methodName>GetBikeTracks</methodName>
+									<defaultParameters>
+										<parameters />
+									</defaultParameters>
 									<statusParameters>
 										<storable>true</storable>
 										<automaticRefresh>true</automaticRefresh>
@@ -82,7 +84,10 @@
 									</statusParameters>
 								</method>
 								<method>
-									<methodName>GetWalkBikeTracks</methodName>
+									<defaultParameters>
+										<parameters />
+									</defaultParameters>
+								    <methodName>GetWalkBikeTracks</methodName>
 									<statusParameters>
 										<storable>true</storable>
 										<automaticRefresh>true</automaticRefresh>
@@ -99,6 +104,9 @@
 								</method>
 								<method>
 									<methodName>GetWalkTracks</methodName>
+									<defaultParameters>
+										<parameters />
+									</defaultParameters>
 									<statusParameters>
 										<storable>true</storable>
 										<automaticRefresh>true</automaticRefresh>
