@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xss:definition main="opendata-trentino" name="opendata-trentino"
+<xss:definition main="campiglio-resource" name="campiglio-resource"
 	namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
 
-	<xss:template name="opendata-trentino">
+	<xss:template name="campiglio-resource">
 		<html xss:anyAttrs="true">
 			<xss:path path="//div[@class='contenuti']">
 				<div class='contenuti'>
