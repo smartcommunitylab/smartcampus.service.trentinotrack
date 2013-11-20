@@ -38,14 +38,6 @@ public class TrentinoTrackScript {
 
 	private static final int MIN_LENGTH = 5000;
 
-	public List<Message> copy(Message msg) {
-		List<Message> result = new ArrayList<Message>();
-//		CampiglioDataPage.Builder builder = CampiglioDataPage.newBuilder((CampiglioDataPage)msg);
-//		builder.setTitle("???");
-		result.add(msg);
-		return result;
-	}
-	
 	public List<Message> downloadZip(ResourceDescr res, CampiglioDataPage page) throws MalformedURLException, IOException, DataFlowException {
 		ZipFile zf = downloadZip(res.getLink());
 		List<Message> result = new ArrayList<Message>();
