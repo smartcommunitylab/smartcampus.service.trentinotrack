@@ -51,7 +51,7 @@ public class Polyline {
 	@Override
 	public String toString() {
 		return "Polyline " + id + " [label=" + label + ", polyline=" + polyline
-				+ ", length=" + length + ", about=" + about + "]";
+				+ ", length=" + length + ", about=" + about + "]\n";
 	}
 	
 	

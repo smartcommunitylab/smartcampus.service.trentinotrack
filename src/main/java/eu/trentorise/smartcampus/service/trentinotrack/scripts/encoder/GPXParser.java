@@ -6,8 +6,9 @@ import java.util.List;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
+
+import edu.emory.mathcs.backport.java.util.Arrays;
 
 public class GPXParser {
 
@@ -59,7 +60,7 @@ public class GPXParser {
 	}
 
 	private String encodeTrack(List<double[]> coords) {
-		return new PolylineEncoder().dpEncode(coords);
+		return PolylineEncoder.encode(coords);
 	}
 	
 }

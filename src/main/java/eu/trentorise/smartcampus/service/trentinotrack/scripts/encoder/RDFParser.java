@@ -84,7 +84,7 @@ public class RDFParser {
 	}
 
 	private String encodeTrack(List<double[]> coords) {
-		return new PolylineEncoder().dpEncode(coords);
+		return PolylineEncoder.encode(coords);
 	}
 	
 }
