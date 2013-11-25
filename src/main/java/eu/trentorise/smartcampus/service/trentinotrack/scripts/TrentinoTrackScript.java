@@ -60,6 +60,7 @@ public class TrentinoTrackScript {
 	    BikeTrack bt = parseGpx(res, bos.toString());
 	    BikeTrack.Builder builder = BikeTrack.newBuilder(bt);
 	    builder.setLabel(page.getTitle() + " - " + bt.getLabel());
+	    builder.setId(page.getTitle() + " - " + bt.getLabel());
 			
 			result.add(builder.build());
 		}		
