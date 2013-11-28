@@ -22,7 +22,7 @@ public class GPXParser {
 	public List<Polyline> parse() throws Exception {
 		List<Polyline> res = new ArrayList<Polyline>();
 		
-		XMLInputFactory f = XMLInputFactory.newInstance();
+		XMLInputFactory f = new com.ctc.wstx.stax.WstxInputFactory();
 		XMLStreamReader r = f.createXMLStreamReader(is);
 		Polyline pl = null;
 		while (r.hasNext()) {

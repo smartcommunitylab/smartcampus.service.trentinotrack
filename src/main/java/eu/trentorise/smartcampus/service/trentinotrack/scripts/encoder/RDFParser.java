@@ -27,7 +27,7 @@ public class RDFParser {
 	public List<Polyline> parse() throws XMLStreamException {
 		List<Polyline> res = new ArrayList<Polyline>();
 		
-		XMLInputFactory f = XMLInputFactory.newInstance();
+		XMLInputFactory f = new com.ctc.wstx.stax.WstxInputFactory();
 		XMLStreamReader r = f.createXMLStreamReader(is);
 		Map<String, Polyline> map = new HashMap<String, Polyline>();
 		Polyline pl = null;

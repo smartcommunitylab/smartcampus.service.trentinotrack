@@ -19,6 +19,12 @@
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
+<dependency>
+	<groupId>woodstox</groupId>
+	<artifactId>wstx-asl</artifactId>
+	<version>3.2.0</version>
+</dependency>
+            
 	</dependencies>
 
 	<build>
@@ -50,7 +56,9 @@
 				<configuration>
 					<instructions>
 						<Include-Resource>{maven-resources}</Include-Resource>
-						<Import-Package>*</Import-Package>
+                        <Embed-Dependency>wstx-asl,stax-api</Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+						<Import-Package>!com.sun.msv.*,!javax.xml.*,*</Import-Package>
 						<Export-Package>eu.trentorise.smartcampus.service.trentinotrack.*</Export-Package>
 						<Private-Package>!*</Private-Package>
 					</instructions>
