@@ -42,7 +42,7 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 		</script>			
 		
 		
-		<connect name="c2" connector="connector" outputVar="page2">
+		<connect name="c2" connector="connector" outputVar="page2" onError="continue">
 			<properties>
 				<property name="url">
 					<value>url</value>
@@ -65,6 +65,7 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 				<value>page2proto</value>
 				<value>page2proto2</value>
 				<value>page</value>
+				<value>url</value>
 			</variables>			
 		</script>			
 		

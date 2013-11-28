@@ -96,7 +96,7 @@ public class TrentinoTrackScript {
 		return "";
 	}
 
-	public List<Message> downloadZip(ResourceDescr res, CampiglioParagraphs pars, CampiglioDataPage page) throws MalformedURLException, IOException, DataFlowException {
+	public List<Message> downloadZip(ResourceDescr res, CampiglioParagraphs pars, CampiglioDataPage page, String url) throws MalformedURLException, IOException, DataFlowException {
 		List<CampiglioParagraph> paragraphs = cleanList(pars.getParagraphList());
 		ZipFile zf = downloadZip(res.getLink());
 		List<Message> result = new ArrayList<Message>();
@@ -123,7 +123,7 @@ public class TrentinoTrackScript {
 			BikeTrack.Builder builder = BikeTrack.newBuilder(bt);
 			builder.setLabel(page.getTitle() + " - " + bt.getLabel());
 			builder.setId(page.getTitle() + " - " + bt.getLabel());
-
+			builder.setLink(url);
 			String descr = findParagraph(bt.getLabel().toLowerCase(), paragraphs);
 
 			builder.setAbout(descr);
