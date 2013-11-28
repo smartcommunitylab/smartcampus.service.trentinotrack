@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xss:definition main="campiglio-resource-text" name="campiglio-resource-text"
+	namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
+
+	<xss:template name="campiglio-resource-text">
+		<html xss:anyAttrs="true">
+			<xss:path path="//div[@class='contenuti']">
+				<div class='contenuti'>
+					<h1 xss:anyAttrs="true" xss:anyContent="true" />
+
+					<xss:repeat>
+						<p xss:anyAttrs="true" xss:anyContent="true">
+							<xss:finally>
+								<xss:copy label="paragraph" query="." />
+							</xss:finally>
+						</p>
+					</xss:repeat>
+
+					<xss:repeat>
+						<xss:choice>
+							<div xss:anyAttrs="true" xss:anyContent="true" />
+							<script xss:anyAttrs="true" xss:anyContent="true" />
+						</xss:choice>
+					</xss:repeat>
+				</div>
+			</xss:path>
+		</html>
+	</xss:template>
+
+</xss:definition>

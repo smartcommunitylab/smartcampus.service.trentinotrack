@@ -9,7 +9,9 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 	<variable name="url1" type="String"/>
 	<variable name="page2" type="org.w3c.dom.Document"/>
 	<variable name="page2proto" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.ResourceDescr"/>
+	<variable name="page2proto2" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.CampiglioParagraphs"/>
 	<variable name="rdf" type="String"/>
+	<variable name="url" type="String"/>
 	
 	<httpConnector name="connector" method="GET" encoding="UTF-8"/>
 	
@@ -31,10 +33,19 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 		writeMethod="addAll">
 		<items>page1proto.getPagesList()</items>
 
+		<script outputVar="url" >
+			<className>eu.trentorise.smartcampus.service.trentinotrack.scripts.TrentinoTrackScript</className>
+			<method>fixUrl</method>
+			<variables>
+				<value>page</value>
+			</variables>			
+		</script>			
+		
+		
 		<connect name="c2" connector="connector" outputVar="page2">
 			<properties>
 				<property name="url">
-					<value>page.getLink()</value>
+					<value>url</value>
 				</property>
 			</properties>
 		</connect>	
@@ -43,11 +54,16 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 			<in>page2</in>
 		</xss>  		
 		
+		<xss key="service/trentinotrack/campiglio-resource-text.xss.xml" outputVar="page2proto2">
+			<in>page2</in>
+		</xss>  				
+		
 		<script outputVar="tracks" writeAction="append" writeMethod="addAll" onError="continue">
 			<className>eu.trentorise.smartcampus.service.trentinotrack.scripts.TrentinoTrackScript</className>
 			<method>downloadZip</method>
 			<variables>
 				<value>page2proto</value>
+				<value>page2proto2</value>
 				<value>page</value>
 			</variables>			
 		</script>			

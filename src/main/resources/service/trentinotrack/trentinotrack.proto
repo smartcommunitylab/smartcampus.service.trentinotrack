@@ -30,3 +30,7 @@ message CampiglioDataPage {
  required string title = 1;
  required string link = 2;
 }
+
+message CampiglioParagraphs {
+ repeated string paragraph = 1;
+}
