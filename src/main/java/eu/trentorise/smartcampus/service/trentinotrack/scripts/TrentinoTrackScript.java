@@ -59,7 +59,7 @@ public class TrentinoTrackScript {
 					cp = new CampiglioParagraph();
 					String title = p.replaceAll("<[^<^>]*>", "");
 					cp.setTitle(title);
-				} else if (p.contains("Legenda")) {
+				} else if (p.contains("Legenda") || p.contains("Le cartine sono")) {
 					skip = true;
 				} else {
 					if (skip) {
