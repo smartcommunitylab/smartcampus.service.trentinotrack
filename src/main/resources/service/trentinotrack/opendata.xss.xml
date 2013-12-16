@@ -8,15 +8,17 @@
 			<xss:path path="//ul[@class='resource-list']">
 				<ul class="resource-list">
 				    <xss:repeat>
-					    <li xss:label="pages">
-					        <a href="(.)*">
-					            <img xss:anyAttrs="true"/>
+					    <li class="resource-item" xss:label="pages">
+					        <a class="heading" href="(.)*" title="(.)*">
 					            <xss:anyText/>
-					            <span class="format-box" property="dc:format"><xss:anyText label="format"/></span>
+					            <span class="format-label" data-format="(.)*" property="dc:format"><xss:anyText label="format"/></span>
 								<xss:finally>
 									<xss:copy label="link" query="@href" />
 								</xss:finally>
 					        </a>
+					    <xss:repeat>
+					    	    <xss:element name="(.)*" anyAttrs="true" anyContent="true"/>
+					    </xss:repeat>	
 					    </li>    
 				    </xss:repeat>
 				</ul>

@@ -154,7 +154,7 @@ public class TrentinoTrackScript {
 
 	public String getResourceRDFURL(OpenDataResourcePages pages) {
 		for (OpenDataResourcePage page : pages.getPagesList()) {
-			if ("rdf".equals(page.getFormat()))
+			if ("rdf".equalsIgnoreCase(page.getFormat()))
 				return page.getLink();
 		}
 		return null;
@@ -163,7 +163,7 @@ public class TrentinoTrackScript {
 	public OpenDataResourcePages getResourceGPXURLs(OpenDataResourcePages pages) {
 		OpenDataResourcePages.Builder res = OpenDataResourcePages.newBuilder();
 		for (OpenDataResourcePage page : pages.getPagesList()) {
-			if ("gpx".equals(page.getFormat()))
+			if ("gpx".equalsIgnoreCase(page.getFormat()))
 				res.addPages(page);
 		}
 		return res.build();

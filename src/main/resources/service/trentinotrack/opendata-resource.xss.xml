@@ -5,30 +5,26 @@
 
 	<xss:template name="opendata-trentino">
 		<html xss:anyAttrs="true">
-			<xss:path path="//div[@id='content']">
-			    <div id="content">
-					<div>
-						<div class="resource-actions">
-					        <a class="(.)*" onclick="(.)*"  href="(.)*" xss:anyContent="true" xss:label="link" xss:labelValue="@href"/>
-					        <a xss:anyAttrs="true" xss:anyContent="true"/>
-						</div>
-						<xss:repeat>
-						    <xss:choice>
-						        <div class="notes" property="rdfs:label">
-									<div id="notes-extract">
-										<p>
-										    <xss:anyText/>
-										    <a xss:anyAttrs="true"><xss:anyText label="extPage"/></a>
-										</p>
-									</div>
-						        </div>
-						        <div xss:anyAttrs="true" xss:anyContent="true"/>
-						        <br/>
-						        <span xss:anyAttrs="true" xss:anyContent="true"/>
-						    </xss:choice>
-						</xss:repeat>
-					</div>
-				</div>		
+			<xss:path path="//section[@class='module module-resource']/div[@class='module-content'][1]">
+			    <div class="module-content" >
+				    <div class="actions" xss:anyContent="true" />
+				    <h1 xss:anyContent="true" xss:anyAttrs="true" />
+				    <p xss:anyAttrs="true" >
+				    	<xss:anyText/>
+				    	<a href="(.)*" title="(.)*" xss:anyContent="true" xss:label="link" xss:labelValue="@href"/>
+				    </p>
+				    <xss:optional>
+					    <div xss:anyAttrs="true">
+						    <p xss:anyAttrs="true" >
+						    	<xss:anyText/>
+						    	<a href="(.)*" xss:anyAttrs="true" xss:anyContent="true" xss:label="extPage" xss:labelValue="@href"/>
+						    </p>			        
+					    </div>
+				    </xss:optional>
+				    <xss:repeat>
+				    	    <xss:element name="(.)*" anyAttrs="true" anyContent="true"/>
+				    </xss:repeat>	
+			    </div>	
 			</xss:path>
 		</html>
 	</xss:template>
