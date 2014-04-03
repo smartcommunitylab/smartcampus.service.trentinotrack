@@ -8,7 +8,7 @@
 			<xss:path path="//ul[@class='resource-list']">
 				<ul class="resource-list">
 				    <xss:repeat>
-					    <li class="resource-item" xss:label="pages">
+					    <li class="resource-item" xss:label="pages" xss:anyAttrs="true">
 					        <a class="heading" href="(.)*" title="(.)*">
 					            <xss:anyText/>
 					            <span class="format-label" data-format="(.)*" property="dc:format"><xss:anyText label="format"/></span>

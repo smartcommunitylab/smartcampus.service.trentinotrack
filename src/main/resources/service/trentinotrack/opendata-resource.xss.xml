@@ -8,7 +8,7 @@
 			<xss:path path="//section[@class='module module-resource']/div[@class='module-content'][1]">
 			    <div class="module-content" >
 				    <div class="actions" xss:anyContent="true" />
-				    <h1 xss:anyContent="true" xss:anyAttrs="true" />
+				    <h1 xss:anyAttrs="true"><xss:anyText label="title"/></h1>
 				    <p xss:anyAttrs="true" >
 				    	<xss:anyText/>
 				    	<a href="(.)*" title="(.)*" xss:anyContent="true" xss:label="link" xss:labelValue="@href"/>

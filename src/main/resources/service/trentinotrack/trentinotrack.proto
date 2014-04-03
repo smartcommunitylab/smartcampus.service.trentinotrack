@@ -19,7 +19,8 @@ message OpenDataResourcePages {
 
 message ResourceDescr {
  required string link = 1; 
- optional string extPage = 2;
+ required string title = 2;
+ optional string extPage = 3;
 }
 
 

@@ -205,7 +205,8 @@ public class TrentinoTrackScript {
 			assert list.size() == 1;
 			for (Polyline p : list) {
 				BikeTrack.Builder bt = BikeTrack.newBuilder().setAbout(descr.getExtPage()).setId(p.getId());
-				bt.setLabel(cleanLabel(p.getLabel()));
+//				bt.setLabel(cleanLabel(p.getLabel()));
+				bt.setLabel(descr.getTitle());
 				if (p.getLength() != null)
 					bt.setLength(p.getLength());
 				if (p.getPolyline() != null)
