@@ -12,7 +12,7 @@ import eu.trentorise.smartcampus.service.trentinotrack.impl.GetWalkBikeTracksDat
 public class TestWalkBikeTracksDataFlow {
 
 	public static void main(String[] args) throws ServiceException {
-		DataFlowTestHelper helper = new DataFlowTestHelper();
+		DataFlowTestHelper helper = new DataFlowTestHelper("test");
 		Map<String,Object> map = new HashMap<String, Object>();
 		Map<String, Object> out = helper.executeDataFlow(
 				"smartcampus.service.trentinotrack",

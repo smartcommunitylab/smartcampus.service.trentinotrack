@@ -5,24 +5,21 @@
 
 	<xss:template name="campiglio-resource-text">
 		<html xss:anyAttrs="true">
-			<xss:path path="//div[@class='contenuti']">
-				<div class='contenuti'>
-					<h1 xss:anyAttrs="true" xss:anyContent="true" />
-
-					<xss:repeat>
-						<p xss:anyAttrs="true" xss:anyContent="true">
+			<xss:path path="//div[@class='grid_8 contenuti contenuti_pagine_eventi']">
+				<div class="grid_8 contenuti contenuti_pagine_eventi">
+				    <div class="gallery_inline" xss:anyContent="true"/>
+				    <div class="padding_dopo_mappa"></div> 
+				    <xss:repeat>
+						<p  xss:anyAttrs="true" xss:anyContent="true">
 							<xss:finally>
 								<xss:copy label="paragraph" query="." />
 							</xss:finally>
 						</p>
 					</xss:repeat>
-
-					<xss:repeat>
-						<xss:choice>
-							<div xss:anyAttrs="true" xss:anyContent="true" />
-							<script xss:anyAttrs="true" xss:anyContent="true" />
-						</xss:choice>
-					</xss:repeat>
+					<div class="info_opzionali"></div>
+					<p xss:anyAttrs="true" xss:anyContent="true"/>
+					<div id="accordion_custom"></div>
+					<script xss:anyAttrs="true" xss:anyContent="true" />
 				</div>
 			</xss:path>
 		</html>

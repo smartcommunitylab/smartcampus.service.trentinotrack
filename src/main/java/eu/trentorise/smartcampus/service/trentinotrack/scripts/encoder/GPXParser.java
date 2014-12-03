@@ -8,8 +8,6 @@ import javax.xml.namespace.QName;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamReader;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
-
 public class GPXParser {
 
 	private InputStream is = null;

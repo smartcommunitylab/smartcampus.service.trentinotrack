@@ -5,37 +5,135 @@
 
 	<xss:template name="campiglio-resource">
 		<html xss:anyAttrs="true">
-			<xss:path path="//div[@class='contenuti']">
-				<div class='contenuti'>
-				<xss:repeat>
-					<xss:choice>
-						<h1 xss:anyAttrs="true" xss:anyContent="true" />
-						<strong xss:anyAttrs="true" xss:anyContent="true" />
-						<div xss:anyAttrs="true" xss:anyContent="true" />
-						<script xss:anyAttrs="true" xss:anyContent="true" />
-						<p>
-						    <xss:optional>
-						        <xss:anyText />
-						    </xss:optional>
-							<xss:choice>
-								<a href="(.)*\.zip" xss:anyContent="true">
+			<xss:path path="//div[@class='grid_8 contenuti contenuti_pagine_eventi']">
+			    <div class="grid_8 contenuti contenuti_pagine_eventi">
+			        <xss:path path="//a">
+			            <xss:repeat>
+			                <xss:choice>
+							    <a href="(.)*\.zip" xss:anyContent="true">
 									<xss:finally>
 										<xss:copy label="link" query="@href" />
 									</xss:finally>
 								</a>
-								<xss:element name="(.)*" anyAttrs="true">
-									<a href="(.)*\.zip" xss:anyContent="true">
-										<xss:finally>
-											<xss:copy label="link" query="@href" />
-										</xss:finally>
-									</a>								    
-								</xss:element>
+				            	<a xss:anyAttrs="true" xss:anyContent="true"/>
+			                </xss:choice>
+			            </xss:repeat>
+			        </xss:path>    
+			    </div>    
+<!-- 		    
+			    				<div class="grid_8 contenuti contenuti_pagine_eventi">
+				    <div class="gallery_inline" xss:anyContent="true"/>
+				    <div class="padding_dopo_mappa"></div> 
+				    <xss:repeat>
+						<p>
+							<xss:choice>
+								<strong>
+								    <xss:choice>
+								        <xss:sequence>
+									        <xss:anyText/>
+									        <xss:repeat>
+									            <xss:choice>
+												    <a href="(.)*\.zip" xss:anyContent="true">
+														<xss:finally>
+															<xss:copy label="link" query="@href" />
+														</xss:finally>
+													</a>
+									            	<a xss:anyAttrs="true" xss:anyContent="true"/>
+									            	<xss:anyText/>
+									            	<strong xss:anyContent="true"/>
+									            	<br/>
+									            	<img xss:anyAttrs="true" xss:anyContent="true"/>
+									            </xss:choice>    
+									        </xss:repeat>        
+									    </xss:sequence>
+									    <a href="(.)*\.zip" xss:anyContent="true">
+											<xss:finally>
+												<xss:copy label="link" query="@href" />
+											</xss:finally>
+										</a>
+								        <br/>
+								        <xss:sequence>
+									        <img xss:anyAttrs="true" xss:anyContent="true"/>
+									        <xss:repeat>
+									            <xss:choice>
+												    <a href="(.)*\.zip" xss:anyContent="true">
+														<xss:finally>
+															<xss:copy label="link" query="@href" />
+														</xss:finally>
+													</a>
+									              	<a xss:anyAttrs="true" xss:anyContent="true"/>
+									            	<xss:anyText/>
+									            	<strong xss:anyContent="true"/>
+									            	<br/>
+									            	<img xss:anyAttrs="true" xss:anyContent="true"/>
+									            </xss:choice>    
+									        </xss:repeat>        
+								        </xss:sequence>    
+								    </xss:choice>    
+								</strong>    
+							    <xss:sequence>
+							        <img xss:anyAttrs="true" xss:anyContent="true"/>
+							        <xss:repeat>
+							            <xss:choice>
+										    <a href="(.)*\.zip" xss:anyContent="true">
+												<xss:finally>
+													<xss:copy label="link" query="@href" />
+												</xss:finally>
+											</a>
+							                <a xss:anyAttrs="true" xss:anyContent="true"/>
+							            	<xss:anyText/>
+							            	<strong xss:anyContent="true"/>
+							            	<br/>
+							            	<img xss:anyAttrs="true" xss:anyContent="true"/>
+							            </xss:choice>    
+							        </xss:repeat>        
+							    </xss:sequence> 
+							    <xss:sequence>
+							        <xss:anyText/>
+							        <xss:repeat>
+							            <xss:choice>
+										    <a href="(.)*\.zip" xss:anyContent="true">
+												<xss:finally>
+													<xss:copy label="link" query="@href" />
+												</xss:finally>
+											</a>
+							                <a xss:anyAttrs="true" xss:anyContent="true"/>
+							            	<xss:anyText/>
+							            	<strong xss:anyContent="true"/>
+							            	<br/>
+							    			<b xss:anyContent="true"/>
+							            	<img xss:anyAttrs="true" xss:anyContent="true"/>
+							            </xss:choice>    
+							        </xss:repeat>        
+							    </xss:sequence>    
+							    <xss:text pattern="&amp;nbsp;"/>
+							    <xss:sequence>
+							    	<b xss:anyContent="true"/>
+							        <xss:repeat>
+							            <xss:choice>
+										    <a href="(.)*\.zip" xss:anyContent="true">
+												<xss:finally>
+													<xss:copy label="link" query="@href" />
+												</xss:finally>
+											</a>
+							                <a xss:anyAttrs="true" xss:anyContent="true"/>
+							            	<xss:anyText/>
+							            	<strong xss:anyContent="true"/>
+							            	<br/>
+							            	<img xss:anyAttrs="true" xss:anyContent="true"/>
+							            </xss:choice>    
+							        </xss:repeat>        
+							    </xss:sequence>
+							    <xss:anyText/>
 							</xss:choice>
 						</p>
-						<p xss:anyAttrs="true" xss:anyContent="true" />
-					</xss:choice>
-				</xss:repeat>
+					</xss:repeat>
+					<div class="info_opzionali"></div>
+					<p xss:anyAttrs="true" xss:anyContent="true"/>
+					<div id="accordion_custom"></div>
+					<script xss:anyAttrs="true" xss:anyContent="true" />
 				</div>
+ -->			
 			</xss:path>
 		</html>
 	</xss:template>

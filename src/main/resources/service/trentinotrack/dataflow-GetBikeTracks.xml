@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataflow
-xmlns="http://www.example.org/mml-schema"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
-
+<dataflow xmlns="http://smart.sayservice.it/schema/dataflow-schema"	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://smart.sayservice.it/schema/dataflow-schema http://smart.sayservice.it/schema/dataflow-schema-1.7.xsd">
 	<variable name="page1" type="org.w3c.dom.Document"/>
 	<variable name="page1proto" type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack.OpenDataResourcePages" />
 	<variable name="url1" type="String"/>
@@ -16,7 +13,7 @@ xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 	<connect name="c1" connector="connector" outputVar="page1" >
 		<properties>
 			<property name="url">
-				<value>"http://dati.trentino.it/dataset/piste-ciclabili"</value>
+				<value>"http://dati.trentino.it/dataset/piste-ciclabili-859194"</value>
 			</property>
 		</properties>
 	</connect>		

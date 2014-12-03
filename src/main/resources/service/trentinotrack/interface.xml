@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<service-definition xmlns="http://www.example.org/interface-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/interface-schema ../interface-schema.xsd ">
-	<interface serviceURI="smartcampus.service.trentinotrack">
+<service-definition xmlns="http://smart.sayservice.it/schema/interface-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://smart.sayservice.it/schema/interface-schema http://smart.sayservice.it/schema/interface-schema-1.7.xsd ">	<interface serviceURI="smartcampus.service.trentinotrack">
 		<operation name="GetBikeTracks" storable="true">
 			<output type="eu.trentorise.smartcampus.service.trentinotrack.data.message.Trentinotrack$BikeTrack" repeated="true" />
 		</operation>
